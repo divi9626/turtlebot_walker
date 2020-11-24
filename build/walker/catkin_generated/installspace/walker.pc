@@ -3,6 +3,6 @@ prefix=/home/divyam/turtlebot_walker/install
 Name: walker
 Description: Description of walker
 Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lwalker
+Requires: roscpp rospy std_msgs geometry_msgs sensor_msgs
