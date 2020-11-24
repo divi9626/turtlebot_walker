@@ -1,0 +1,2 @@
+walker
+-DCATKIN_DEVEL_PREFIX=/home/divyam/turtlebot_walker/devel -DCMAKE_INSTALL_PREFIX=/home/divyam/turtlebot_walker/install -G Unix Makefiles
