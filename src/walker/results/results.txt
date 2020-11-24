@@ -1,0 +1,9 @@
+CPP-CHECK results:  cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" -e "^./src/")
+
+
+Checking scripts/main.cpp...
+1/2 files checked 38% done
+Checking scripts/walker.cpp...
+2/2 files checked 100% done
+
+

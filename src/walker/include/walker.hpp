@@ -53,7 +53,7 @@ public:
    *
    * @param n
    */
-  Walker(ros::NodeHandle n);
+  explicit Walker(ros::NodeHandle n);
   /**
    * @brief Destroy the Walker object
    *

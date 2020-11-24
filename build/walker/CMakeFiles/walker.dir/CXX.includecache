@@ -7,9 +7,9 @@
 #IncludeRegexTransform: 
 
 /home/divyam/turtlebot_walker/src/walker/include/walker.hpp
-ros/ros.h
--
 geometry_msgs/Twist.h
+-
+ros/ros.h
 -
 sensor_msgs/LaserScan.h
 -
@@ -17,10 +17,10 @@ std_msgs/String.h
 -
 
 /home/divyam/turtlebot_walker/src/walker/scripts/main.cpp
-ros/ros.h
--
 ../include/walker.hpp
 /home/divyam/turtlebot_walker/src/walker/include/walker.hpp
+ros/ros.h
+-
 
 /home/divyam/turtlebot_walker/src/walker/scripts/walker.cpp
 ../include/walker.hpp
