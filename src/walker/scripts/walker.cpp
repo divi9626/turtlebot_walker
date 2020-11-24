@@ -5,6 +5,7 @@
  * @brief
  * @version 0.1
  * @date 2020-11-22
+ * @copyright Copyright (c) 2020
  * @license MIT License
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -25,8 +26,6 @@
  * SOFTWARE.
  *
  *
- * @copyright Copyright (c) 2020
- *
  */
 
 #include "../include/walker.hpp"
@@ -44,12 +43,12 @@ Walker::Walker(ros::NodeHandle n)
   twist.linear.z = 0;
   move_pub.publish(twist);
   ROS_INFO("Walker node initialized");
-};
+}
 /**
  * @brief Destroy the Walker:: Walker object
  *
  */
-Walker::~Walker() { ROS_INFO("Walker_node is shutting down"); };
+Walker::~Walker() { ROS_INFO("Walker_node is shutting down"); }
 /**
  * @brief callback function that waits for scan message and accordingly
  * publishes the velocity
@@ -62,7 +61,7 @@ void Walker::laserCallBack(const sensor_msgs::LaserScan::ConstPtr &scan) {
   if (scan->ranges[0] <= 0.6 || scan->ranges[30] <= 0.6 ||
       scan->ranges[330] <= 0.6) {
     flag_check = true;
-  };
+  }
 
   // publish angular velocity if the obstacle is within threshold value
   if (flag_check) {
@@ -77,5 +76,5 @@ void Walker::laserCallBack(const sensor_msgs::LaserScan::ConstPtr &scan) {
     twist.angular.z = 0.0;
     move_pub.publish(twist);
     ROS_INFO("No Obstacle ahead, moving forward");
-  };
-};
+  }
+}

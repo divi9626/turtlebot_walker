@@ -5,6 +5,7 @@
  * @brief
  * @version 0.1
  * @date 2020-11-22
+ * @copyright Copyright (c) 2020
  * @license MIT License
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +25,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @copyright Copyright (c) 2020
  *
  */
 /**
@@ -42,12 +42,12 @@
 #include <std_msgs/String.h>
 
 class Walker {
-private:
+ private:
   geometry_msgs::Twist twist;
   ros::Publisher move_pub;
   ros::Subscriber laser_sub;
 
-public:
+ public:
   /**
    * @brief Construct a new Walker object
    *
@@ -66,4 +66,4 @@ public:
    */
   void laserCallBack(const sensor_msgs::LaserScan::ConstPtr &scan);
 };
-#endif // include Walker.hpp
+#endif  // TURTLEBOT_WALKER_SRC_WALKER_INCLUDE_WALKER_HPP_
