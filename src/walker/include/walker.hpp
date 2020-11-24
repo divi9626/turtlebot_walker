@@ -1,3 +1,6 @@
+#ifndef INCLUDE_WALKER_HPP_
+#define INCLUDE_WALKER_HPP_
+
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
 #include <sensor_msgs/LaserScan.h>
@@ -13,3 +16,4 @@ public:
 	~Walker();
 	void laserCallBack(const sensor_msgs::LaserScan::ConstPtr& scan);
 };
+#endif // include Walker.hpp
